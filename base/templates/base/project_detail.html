@@ -1,0 +1,20 @@
+<!-- project_management/project_detail.html -->
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+<p>Start date: {{ project.start_date }}</p>
+<p>End date: {{ project.end_date }}</p>
+
+<h2>Tasks</h2>
+{% for task in tasks %}
+    <h3>{{ task.name }}</h3>
+    <p>{{ task.description }}</p>
+    <p>Status: {{ task.status }}</p>
+    <p>Start date: {{ task.start_date }}</p>
+    <p>End date: {{ task.end_date }}</p>
+{% endfor %}
+
+<h2>Team Members</h2>
+{% for team_member in team_members %}
+    <h3>{{ team_member.name }}</h3>
+    <p>{{ team_member.email }}</p>
+{% endfor %}
